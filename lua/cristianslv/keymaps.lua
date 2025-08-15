@@ -169,3 +169,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
+
+vim.keymap.set('n', '<leader>dc', function()
+  require('jdtls').test_class()
+end, { desc = '[D]ebug Test [C]lass' })
+
+vim.keymap.set('n', '<leader>dm', function()
+  require('jdtls').test_nearest_method()
+end, { desc = '[D]ebug Nearest [M]ethod' })
+
+vim.keymap.set('n', '<leader>dl', function()
+  require('jdtls.dap').setup_dap_main_class_configs()
+end, { desc = '[D]ebug: [L]oad Main Classes' })
+
+vim.keymap.set('n', '<leader>dq', function()
+  require('dap').terminate()
+  require('dapui').close()
+end, { desc = '[D]ebug: [Q]uit DAP and UI' })

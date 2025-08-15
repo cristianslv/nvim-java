@@ -16,8 +16,10 @@ return { -- Useful plugin to show you pending keybinds.
     -- Document existing key chains
     spec = {
       { '<leader>j', group = '[J]son' },
+      { '<leader>d', group = '[D]ebug' },
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
+      { '<leader>r', group = '[R]eplace' },
     },
   },
 }
