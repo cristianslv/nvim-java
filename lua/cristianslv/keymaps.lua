@@ -186,3 +186,5 @@ vim.keymap.set('n', '<leader>dq', function()
   require('dap').terminate()
   require('dapui').close()
 end, { desc = '[D]ebug: [Q]uit DAP and UI' })
+
+vim.keymap.set('n', '<leader>mf', ':!mvn com.coveo:fmt-maven-plugin:format<CR>', { desc = '[M]aven [F]ormat' })
