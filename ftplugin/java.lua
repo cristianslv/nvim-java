@@ -86,7 +86,7 @@ local config = {
         },
       },
       completion = {
-        importOrder = { 'java', 'javax', 'org', 'com' },
+        importOrder = { 'java', 'javax', 'org', 'com', 'org.springframework' },
       },
       showUnimplementedMethods = true,
       maven = { downloadSources = true },
