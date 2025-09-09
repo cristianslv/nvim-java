@@ -1,1 +1,12 @@
 lazy-lock.json
+
+# Neovim related files
+.netrwhist
+
+# Do NOT ignore deps directory - it contains necessary .jar files
+# !deps/
+# !deps/**
+
+# Ignore any potential OS files
+.DS_Store
+Thumbs.db

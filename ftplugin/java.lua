@@ -15,7 +15,7 @@ local config = {
     '/Users/cristian.silva/.sdkman/candidates/java/21.0.8-tem/bin/java', -- or '/path/to/java21_or_newer/bin/java'
     -- depends on if `java` is in your $PATH env variable and if it points to the right version.
 
-    '-javaagent:' .. vim.fn.expand '~/Downloads/lombok.jar',
+    '-javaagent:' .. vim.fn.expand '~/.config/nvim-java/deps/lombok.jar',
     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
     '-Dosgi.bundles.defaultStartLevel=4',
     '-Declipse.product=org.eclipse.jdt.ls.core.product',
@@ -109,9 +109,9 @@ local config = {
 --
 -- If you don't plan on using the debugger or other eclipse.jdt.ls plugins you can remove this
 local bundles = {
-  vim.fn.glob('~/contaazul/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar', true),
+  vim.fn.glob('~/.config/nvim-java/deps/debug/com.microsoft.java.debug.plugin-*.jar', true),
 }
-vim.list_extend(bundles, vim.split(vim.fn.glob('~/contaazul/vscode-java-test/server/*.jar', true), '\n'))
+vim.list_extend(bundles, vim.split(vim.fn.glob('~/.config/nvim-java/deps/debug/*.jar', true), '\n'))
 config['init_options'] = {
   bundles = bundles,
 }
